@@ -24,6 +24,7 @@ document.getElementById('verifyOtpButton').addEventListener('click', function ()
     const category = document.getElementById('categorySelect').value;
     let inputData = '';
 
+    // Based on category, get the input value
     if (category === 'p1') {
         inputData = document.getElementById('photoInput').value;
     } else if (category === 'p2') {
@@ -32,9 +33,15 @@ document.getElementById('verifyOtpButton').addEventListener('click', function ()
         inputData = document.getElementById('textInput').value;
     }
 
-    // Check if the fields are empty
-    if (!inputData && !firstName && !lastName)  {
+    // Check if any required field is empty
+    if (!firstName || !lastName || !inputData)  {
         alert('Please fill in the required information.');
+        return;
+    }
+
+    // Validate URLs (for photo or link)
+    if ((category === 'p1' || category === 'p2') && !isValidURL(inputData)) {
+        alert('Please enter a valid URL.');
         return;
     }
 
@@ -42,11 +49,19 @@ document.getElementById('verifyOtpButton').addEventListener('click', function ()
     QRCode.toDataURL(inputData, function (err, url) {
         if (err) {
             alert('Error generating QR code.');
+            console.error(err);  // Log the error for debugging
             return;
         }
+        // Display the generated QR code
         document.getElementById('qrcodeImg').src = url;
         document.getElementById('qrcodeImg').style.display = 'block';
         document.getElementById('qrcodeLabel').innerText = inputData;
         document.getElementById('confirmation').style.display = 'block';  // Show confirmation
     });
 });
+
+// Function to validate URL format
+function isValidURL(str) {
+    const pattern = /^(https?:\/\/)?([a-z0-9-]+\.)+[a-z0-9]{2,}([\/\w \.-]*)*\/?$/i;
+    return pattern.test(str);
+}
