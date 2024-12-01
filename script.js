@@ -65,15 +65,3 @@ function isValidURL(str) {
     const pattern = /^(https?:\/\/)?([a-z0-9-]+\.)+[a-z0-9]{2,}([\/\w \.-]*)*\/?$/i;
     return pattern.test(str);
 }
-
-function downloadPDF() {
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
-    
-    // You can add your page content to the PDF here
-    doc.text("Confirmation Page", 20, 30);  // Example content
-    doc.text("Thank you for your purchase!", 20, 40);  // Example content
-    
-    // Save the PDF file
-    doc.save("confirmation.pdf");
-  }
