@@ -20,7 +20,7 @@ body {
 header, footer {
     background: linear-gradient(rgb(144, 192, 238),rgb(50, 63, 150));
     padding: 20px;
-    text-shadow: 2px 4px 6px #227134;
+    text-shadow: 2px 4px 6px lightslategray;
     margin-top: 0;
     text-align: center;
     color: white;
