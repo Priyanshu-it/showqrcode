@@ -62,33 +62,3 @@ function isValidURL(str) {
     const pattern = /^(https?:\/\/)?([a-z0-9-]+\.)+[a-z0-9]{2,}([\/\w \.-]*)*\/?$/i;
     return pattern.test(str);
 }
-
-// Function to download the QR code as a PDF
-function downloadPDF() {
-    const { jsPDF } = window.jspdf;  // Access jsPDF from the global scope
-    const doc = new jsPDF();
-
-    const qrImage = document.getElementById('qrcodeImg');
-    const qrText = document.getElementById('qrcodeLabel').innerText;
-
-    if (!qrImage.src) {
-        alert('Please generate the QR code before downloading.');
-        return;
-    }
-
-    // Add the QR code to the PDF
-    doc.text("QR Code Registration", 10, 10);
-    doc.text("First Name: " + document.getElementById('nameInput').value, 10, 20);
-    doc.text("Last Name: " + document.getElementById('lastInput').value, 10, 30);
-    doc.text("Category: " + document.getElementById('categorySelect').options[document.getElementById('categorySelect').selectedIndex].text, 10, 40);
-    doc.text("Entered Data: " + qrText, 10, 50);
-
-    // Add QR code image to the PDF (scaled and positioned appropriately)
-    doc.addImage(qrImage.src, 'PNG', 10, 60, 50, 50);  // X, Y, Width, Height
-
-    // Save the PDF
-    doc.save('QRCode_Registration.pdf');
-}
-
-// Add the download PDF functionality to a button
-document.getElementById('downloadPdfButton').addEventListener('click', downloadPDF);
