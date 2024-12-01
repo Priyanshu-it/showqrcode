@@ -18,6 +18,9 @@ document.getElementById('categorySelect').addEventListener('change', function ()
 
 // QR Code Generation and Registration Confirmation
 document.getElementById('verifyOtpButton').addEventListener('click', function () {
+    const firstName = document.getElementById('nameInput').value;
+    const lastName = document.getElementById('lastInput').value;
+
     const category = document.getElementById('categorySelect').value;
     let inputData = '';
 
@@ -29,7 +32,8 @@ document.getElementById('verifyOtpButton').addEventListener('click', function ()
         inputData = document.getElementById('textInput').value;
     }
 
-    if (!inputData) {
+    // Check if the fields are empty
+    if (!inputData && !firstName && !lastName)  {
         alert('Please fill in the required information.');
         return;
     }
