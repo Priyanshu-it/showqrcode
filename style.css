@@ -100,7 +100,6 @@ button:hover {
     padding: 20px;
     font-size: 30px;
     width: 30px;
-    text-align: center;
     text-decoration: none;
     margin: 5px;
     float: right;
@@ -114,6 +113,7 @@ button:hover {
   .fa-download {
     background: linear-gradient(rgb(144, 192, 238),rgb(50, 63, 150));
     color: white;
+    text-align: center;
   }
 
 @media print { body { font-size: 12pt; }
