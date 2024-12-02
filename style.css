@@ -93,7 +93,7 @@ button:hover {
     width: 500px;
     max-width: 300px;
     margin-top: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 @media print { body { font-size: 12pt; }
