@@ -9,7 +9,7 @@ document.getElementById('categorySelect').addEventListener('change', function ()
     } else if (category === 'p2') {
         dynamicInput.innerHTML = '<label for="linkInput">Enter Link:</label><input type="url" id="linkInput" placeholder="Enter URL" required />';
     } else if (category === 'p3') {
-        dynamicInput.innerHTML = '<label for="textInput">Enter Text:</label> <textarea rows="4" cols="50" type="text" id="textInput" placeholder="Enter text" required > </textarea>';
+        dynamicInput.innerHTML = '<label for="textInput">Enter Text:</label><textarea rows="4" cols="50"> <input type="text" id="textInput" placeholder="Enter text" required /> </textarea>';
     }
 });
 
