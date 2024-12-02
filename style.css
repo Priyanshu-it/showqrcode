@@ -68,7 +68,7 @@ input, select, textarea {
 }
 
 input:focus, select:focus {
-    border-color: #288c28;
+    border-color:aquamarine;
     outline: none;
 }
 
@@ -91,9 +91,9 @@ button:hover {
 
 #qrcodeImg {
     width: 500px;
-    margin-top: 20px;
     max-width: 300px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 5px;
 }
 
 @media print { body { font-size: 12pt; }
