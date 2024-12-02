@@ -96,6 +96,25 @@ button:hover {
     margin-bottom: 10px;
 }
 
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-decoration: none;
+    margin: 5px 2px;
+    float: right;
+    border-radius: 50%;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-download {
+    background: linear-gradient(rgb(144, 192, 238),rgb(50, 63, 150));
+    color: white;
+  }
+
 @media print { body { font-size: 12pt; }
     .no-printed { display: none; }
     .printed-only { display: flex; }
