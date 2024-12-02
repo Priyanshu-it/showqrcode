@@ -5,10 +5,8 @@ document.getElementById('categorySelect').addEventListener('change', function ()
     dynamicInput.innerHTML = '';  // Clear previous inputs
 
     if (category === 'p1') {
-        dynamicInput.innerHTML = '<label for="photoInput">Upload Photo:</label><input type="url" id="photoInput" placeholder="URL to img on Google Drive" required />';
-    } else if (category === 'p2') {
         dynamicInput.innerHTML = '<label for="linkInput">Enter Link:</label><input type="url" id="linkInput" placeholder="Enter URL" required />';
-    } else if (category === 'p3') {
+    } else if (category === 'p2') {
         dynamicInput.innerHTML = '<label for="textInput">Enter a Text:</label><textarea id="textInput" placeholder="Enter text" rows="4" required></textarea>';
     }
 });
@@ -22,10 +20,8 @@ document.getElementById('verifyOtpButton').addEventListener('click', function ()
 
     // Based on category, retrieve the corresponding input value
     if (category === 'p1') {
-        inputData = document.getElementById('photoInput').value.trim();
-    } else if (category === 'p2') {
         inputData = document.getElementById('linkInput').value.trim();
-    } else if (category === 'p3') {
+    } else if (category === 'p2') {
         inputData = document.getElementById('textInput').value.trim();
     }
 
@@ -36,7 +32,7 @@ document.getElementById('verifyOtpButton').addEventListener('click', function ()
     }
 
     // Validate URLs (for photo or link)
-    if ((category === 'p1' || category === 'p2') && !isValidURL(inputData)) {
+    if ((category === 'p1') && !isValidURL(inputData)) {
         alert('Please enter a valid URL.');
         return;
     }
