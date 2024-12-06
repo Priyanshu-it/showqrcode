@@ -37,20 +37,37 @@ document.getElementById('verifyOtpButton').addEventListener('click', function ()
         return;
     }
 
-    // Generate QR code
-    QRCode.toDataURL(inputData, function (err, url) {
-        if (err) {
-            alert('Error generating QR code.');
-            console.error(err);  // Log the error for debugging
-            return;
-        }
+    // Disable button and show spinner when the user clicks "Create to Generate QR Code"
+    const spinner = document.getElementById('spinner');
+    const button = document.getElementById('verifyOtpButton');
+    button.disabled = true;  // Disable the button
+    spinner.style.display = 'inline';  // Show the spinner
 
-        // Display the generated QR code and confirmation message
-        document.getElementById('qrcodeImg').src = url;
-        document.getElementById('qrcodeImg').style.display = 'block';
-        document.getElementById('qrcodeLabel').innerText = inputData;
-        document.getElementById('confirmation').style.display = 'block';  // Show confirmation
-    });
+    let count = 0;  // Start count as a number
+    let interval = setInterval(function () {
+        spinner.innerText = count;  // Update spinner text to show count
+        count++;
+        if (count > 4) {
+            clearInterval(interval);  // Stop after "Loading 4"
+        }
+    }, 1000); // Update every 1 second
+
+    setTimeout(function () {
+        button.disabled = false;  // Enable the button after 5 seconds
+        spinner.style.display = 'none';  // Hide the spinner
+
+        // Generate QR code
+        QRCode.toDataURL(inputData, function (err, url) {
+            if (err) {
+                alert('Error generating QR code.');
+                return;
+            }
+            document.getElementById('qrcodeImg').src = url;
+            document.getElementById('qrcodeImg').style.display = 'block';
+            document.getElementById('qrcodeLabel').innerText = inputData;
+            document.getElementById('confirmation').style.display = 'block';  // Show confirmation
+        });
+    }, 5000);
 });
 
 // Function to validate URL format
