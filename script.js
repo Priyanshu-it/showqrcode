@@ -66,6 +66,7 @@ document.getElementById('verifyOtpButton').addEventListener('click', function ()
             document.getElementById('qrcodeImg').style.display = 'block';
             document.getElementById('qrcodeLabel').innerText = inputData;
             document.getElementById('confirmation').style.display = 'block';  // Show confirmation
+            spinner.innerText = '';
         });
     }, 5000);
 });
