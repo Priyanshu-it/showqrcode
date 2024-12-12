@@ -47,7 +47,7 @@ document.getElementById('verifyOtpButton').addEventListener('click', function ()
     let interval = setInterval(function () {
         spinner.innerText = count;  // Update spinner text to show count
         count++;
-        if (count > 4) {
+        if (count > 5) {
             clearInterval(interval);  // Stop after "Loading 4"
         }
     }, 1000); // Update every 1 second
