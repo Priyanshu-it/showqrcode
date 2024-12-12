@@ -19,7 +19,7 @@ body {
 /* Header Section */
 header, footer {
     background: linear-gradient(rgb(144, 192, 238),rgb(50, 63, 150));
-    padding: 20px;
+    padding: 8px;
     text-shadow: 2px 4px 4px rgb(130, 140, 160);
     margin-top: 0;
     text-align: center;
@@ -114,5 +114,6 @@ button:hover {
 
     header h2 {
         font-size: 20px;
+        text-align: center;
     }
 }
