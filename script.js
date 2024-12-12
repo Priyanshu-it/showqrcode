@@ -68,7 +68,7 @@ document.getElementById('verifyOtpButton').addEventListener('click', function ()
             document.getElementById('confirmation').style.display = 'block';  // Show confirmation
             spinner.innerText = ''; // stop
         });
-    }, 5000);
+    }, 6000);
 });
 
 // Function to validate URL format

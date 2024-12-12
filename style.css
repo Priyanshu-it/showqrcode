@@ -68,7 +68,7 @@ input, select, textarea {
 }
 
 input:focus, select:focus {
-    border-color:rgb(150, 250, 200);
+    border-color:teal;
     outline: none;
 }
 
