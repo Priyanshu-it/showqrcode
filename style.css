@@ -1,4 +1,5 @@
 /* General Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -94,7 +95,7 @@ button:hover {
     margin-top: 20px;
     margin-bottom: 8px;
     border: 04px solid black;
-    border-radius: 10px
+    border-radius: 10px;
 }
 
 @media print { body { font-size: 12pt; }
