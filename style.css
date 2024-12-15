@@ -89,10 +89,12 @@ button:hover {
 }
 
 #qrcodeImg {
-    width: 500px;
+    width: 400px;
     max-width: 300px;
     margin-top: 20px;
     margin-bottom: 8px;
+    border: 04px solid black;
+    border-radius: 10px
 }
 
 @media print { body { font-size: 12pt; }
