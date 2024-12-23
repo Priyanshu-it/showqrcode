@@ -15,7 +15,7 @@ if (currentMonth === 10 || currentMonth === 11 || currentMonth === 0) {
             snowflake.textContent = '❄'; // Unicode snowflake symbol
 
             // Random size and position
-            const size = Math.random() * 6 + 6; // Snowflake size between 10px and 20px
+            const size = Math.random() * 7 + 7; // Snowflake size between 10px and 20px
             snowflake.style.fontSize = `${size}px`;
             snowflake.style.left = `${Math.random() * 100}%`;
             snowflake.style.animationDuration = `${Math.random() * 5 + 5}s`; // Random fall duration
