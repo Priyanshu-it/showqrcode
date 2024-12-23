@@ -125,7 +125,6 @@ button:hover {
 }
 
 /* extra */
-
 /* Snowfall animation container */
 #snowfall {
     position: absolute;
@@ -152,7 +151,7 @@ button:hover {
 /* Snowflake fall animation */
 @keyframes fall {
     0% {
-        transform: translateY(-10px);
+        transform: translateY(-70px);
     }
     100% {
         transform: translateY(100vh);
