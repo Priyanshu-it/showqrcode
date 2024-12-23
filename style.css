@@ -123,3 +123,38 @@ button:hover {
         text-align: center;
     }
 }
+
+/* extra */
+
+/* Snowfall animation container */
+#snowfall {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;  /* Prevent interaction with the snowfall area */
+    z-index: 9999;         /* Make sure snowflakes are on top */
+    overflow: hidden;
+}
+
+/* Snowflake styling */
+.snowflake {
+    position: absolute;
+    color: #FFF;
+    font-size: 24px;
+    opacity: 0.8;
+    user-select: none;
+    pointer-events: none;
+    animation: fall 10s linear infinite;
+}
+
+/* Snowflake fall animation */
+@keyframes fall {
+    0% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
