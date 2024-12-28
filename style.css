@@ -150,7 +150,7 @@ button:hover {
 /* Snowflake fall animation */
 @keyframes fall {
     0% {
-        transform: translateY(-70px);
+        transform: translateY(-70vh);
     }
     100% {
         transform: translateY(100vh);
