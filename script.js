@@ -5,7 +5,7 @@ document.getElementById('categorySelect').addEventListener('change', function ()
     dynamicInput.innerHTML = '';  // Clear previous inputs
 
     if (category === 'p1') {
-        dynamicInput.innerHTML = '<label for="linkInput">Enter Link:</label><input type="url" id="linkInput" placeholder="Enter URL" required />';
+        dynamicInput.innerHTML = '<label for="linkInput">Enter Link:</label><input type="url" id="linkInput" placeholder="Enter https://.." required />';
     } else if (category === 'p2') {
         dynamicInput.innerHTML = '<label for="textInput">Enter a Text:</label><textarea id="textInput" placeholder="Enter text" rows="4" required></textarea>';
     }
