@@ -26,11 +26,6 @@ header, footer {
     color: white;
 }
 
-header {
-    top: 0;
-    position: fixed;
-}
-
 header h2 {
     font-size: 24px;
     margin: 0;
