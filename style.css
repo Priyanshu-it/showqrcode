@@ -17,7 +17,7 @@ body {
 
 /* Header Section */
 header, footer {
-    background: linear-gradient(rgb(144, 192, 238),rgb(50, 63, 150));
+    background: linear-gradient(rgb(144, 192, 238), rgb(50, 63, 150));
     width: 100%;
     text-shadow: 2px 4px 4px rgb(130, 140, 160);
     margin-top: 0;
@@ -28,10 +28,12 @@ header, footer {
 header {
     top: 0;
     position: fixed;
+    height: auto; /* Automatically adjusts based on content */
 }
 
 footer {
     bottom: 0;
+    height: auto; /* Automatically adjusts based on content */
 }
 
 header h2 {
