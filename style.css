@@ -26,15 +26,6 @@ header, footer {
     color: white;
 }
 
-header {
-    top: 0;
-    position: fixed;
-}
-
-footer {
-    bottom: 0;
-}
-
 header h2 {
     font-size: 24px;
     margin: 0;
@@ -118,6 +109,15 @@ button:hover {
         display: none;
     }
 
+    header {
+        top: 0;
+        position: fixed;
+    }
+    
+    footer {
+        bottom: 0;
+    }
+    
     form {
         width: 90%;
         padding: 20px;
