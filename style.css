@@ -18,11 +18,20 @@ body {
 /* Header Section */
 header, footer {
     background: linear-gradient(rgb(144, 192, 238),rgb(50, 63, 150));
-    padding: 8px;
+    width: 100%;padding: 1em 0;
     text-shadow: 2px 4px 4px rgb(130, 140, 160);
     margin-top: 0;
     text-align: center;
     color: white;
+}
+
+header {
+    top: 0;
+    position: fixed;
+}
+
+footer {
+    bottom: 0;
 }
 
 header h2 {
