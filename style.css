@@ -16,7 +16,7 @@ body {
 }
 
 /* Header Section */
-header, footer {
+header {
     background: linear-gradient(rgb(144, 192, 238), rgb(50, 63, 150));
     width: 100%;
     padding: 8px;
@@ -105,9 +105,6 @@ button:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .footer-link {
-        display: none;
-    }
 
     form {
         width: 90%;
