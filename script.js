@@ -1,3 +1,5 @@
+// <scirpt src ="#"></scirpt>
+
 // Handle category selection and dynamic input change
 document.getElementById('categorySelect').addEventListener('change', function () {
     const category = this.value;
